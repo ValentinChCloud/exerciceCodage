@@ -112,12 +112,11 @@ then
 	elif [ $note -lt 12 ] && [ $note -ge 10 ]
 	then
 		echo "Passable"
-	elif [ $note -lt 10 ] && [ $note -ge 0 ]
-	then
+	else [ $note -lt 10 ] && [ $note -ge 0 ]
 		echo "Insuffisant"
-	else
-		echo "Valeur incorrecte"
-	fi
+        fi
+else
+	echo "Valeur incorrecte"
 fi
 ```
 
