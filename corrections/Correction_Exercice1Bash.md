@@ -51,11 +51,11 @@ la différence entre différents qualité de scripts
 1- Forme du script.
 Les bonne pratiques invite à ce que les différents "blocs" de ton script soient visible au premier coup d’œil.
 Un "bloc", est par exemple, un semble de commande regroupé sous une condition if. Comme par exemple.
-
+```
 if [ $note -lt 20 ] && [ $note -ge 16 ]
 then
 echo "Très bien"
-	
+```	
 La commande `echo "Très bien"` appartient au bloc de la condition `if [ $note -lt 20 ] && [ $note -ge 16 ] then.
 	
 De ce fait il faut que cela apparaisse "physiquement" dans ton script.
