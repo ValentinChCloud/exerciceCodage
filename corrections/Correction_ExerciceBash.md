@@ -9,11 +9,8 @@
 3 guillemets \`\`\` avant et après des lignes de codes.
 
 Les corrections se feront selon le modèle suivant:
-
         * Un avis général sur la compréhension de l'exercice
-		
         * Correction des erreurs dans le scripts
-		
         * La qualité du script, ce qu'il sous*entend, est ce qu'il est possible d'écrire un script plus rapide ou plus ergonomique.
 
 
@@ -22,7 +19,6 @@ pour résoudre ce problème
 
 Correction script:
 Le script ne prend pas en compte un cas de figure:
-
         * la note est égal à 20
 		
 Dans ce cas le message "Valeur incorrecte " sera retournée.  Alors que la note 20, est une valeur correcte.
@@ -124,9 +120,7 @@ fi
 ```
 
 Comme tu peux voir, ici l'amélioration concerne principalement deux choses :
-
         * l’intérêt de l'indentation des différents "blocs", comme expliqué précédemment
-		
         * si le premier test n'est pas réussi aucun autre test n'est effectué, donc nous avons optimisé le script.
 
 
