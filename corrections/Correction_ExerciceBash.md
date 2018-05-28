@@ -9,10 +9,9 @@
 3 guillemets \`\`\` avant et après des lignes de codes.
 
 Les corrections se feront selon le modèle suivant:
-        * Un avis général sur la compréhension de l'exercice
-        * Correction des erreurs dans le scripts
-        * La qualité du script, ce qu'il sous*entend, est ce qu'il est possible d'écrire un script plus rapide ou plus ergonomique.
-
+ * Un avis général sur la compréhension de l'exercice
+ * Correction des erreurs dans le scripts
+ * La qualité du script, ce qu'il sous*entend, est ce qu'il est possible d'écrire un script plus rapide ou plus ergonomique.
 
 Avis général : l'exercice à été compris et la solution proposée fait bien appel aux différents outils que propose le langage bash
 pour résoudre ce problème
@@ -120,8 +119,8 @@ fi
 ```
 
 Comme tu peux voir, ici l'amélioration concerne principalement deux choses :
-        * l’intérêt de l'indentation des différents "blocs", comme expliqué précédemment
-        * si le premier test n'est pas réussi aucun autre test n'est effectué, donc nous avons optimisé le script.
+* l’intérêt de l'indentation des différents "blocs", comme expliqué précédemment
+* si le premier test n'est pas réussi aucun autre test n'est effectué, donc nous avons optimisé le script.
 
 
 
