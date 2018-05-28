@@ -1,6 +1,6 @@
-Correction exercices bash :
+# Correction exercices bash :
 
-Légende
+# Légende
 ```
 
 ```
@@ -12,7 +12,9 @@ Les corrections se feront selon le modèle suivant:
 	- Un avis général sur la compréhension de l'exercice 
 	- Correction des erreurs dans le scripts
 	- La qualité du script, ce qui sous entend, est ce qu'il possible d'écrire un script plus rapide ou plus ergonomique.
-Correction exercice 1 :
+
+
+# Correction exercice 1 :
 
 Avis général : l'exercice à été compris et la solution proposé fait bien appel aux différents outils que propose le langage bash
 pour résoudre ce problème 
@@ -128,7 +130,7 @@ Comme tu peux voir deux choses :
 
 	
 	
-Correction exercice 2 :
+# Correction exercice 2 :
 
 
 Avis général : l'exercice est incomplet et ne remplit pas les conditions données par l'énoncé de l'exercice, ils faut faire attention
@@ -152,7 +154,7 @@ Qualité du script:
 	Comparé à l'exercice un, des blocs de codes sont bien indentés. Rien à signaler autrement.
 	
 	
-Correction exercice 3 :
+# Correction exercice 3 :
 
 Avis général : L'exercice à été compris et le traitement des paramètres du script est bien traité.
 
