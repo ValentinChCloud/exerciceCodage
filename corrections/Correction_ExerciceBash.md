@@ -11,19 +11,19 @@
 Les corrections se feront selon le modèle suivant:
  * Un avis général sur la compréhension de l'exercice
  * Correction des erreurs dans le scripts
- * La qualité du script, ce qu'il sous*entend, est ce qu'il est possible d'écrire un script plus rapide ou plus ergonomique.
+ * La qualité du script, ce qu'il sous-entend, est ce qu'il est possible d'écrire un script plus rapide ou plus ergonomique.
 
 Avis général : l'exercice à été compris et la solution proposée fait bien appel aux différents outils que propose le langage bash
 pour résoudre ce problème
 
 Correction script:
 Le script ne prend pas en compte un cas de figure:
-        * la note est égal à 20
+ * la note est égal à 20
 		
 Dans ce cas le message "Valeur incorrecte " sera retournée.  Alors que la note 20, est une valeur correcte.
 Il suffira de remplacer
 ```
-if [ $note *lt 20 ] && [ $note *ge 16 ]
+if [ $note -lt 20 ] && [ $note -ge 16 ]
 then
 echo "Très bien"
 
@@ -32,7 +32,7 @@ echo "Très bien"
 par
 
 ```
-if [ $note *le 20 ] && [ $note *ge 16 ]
+if [ $note -le 20 ] && [ $note -ge 16 ]
 then
 echo "Très bien"
 ```
@@ -45,15 +45,15 @@ Qualité du script:
 rendre tes scripts : plus rapide, plus performant et plus facile à retravailler. On peut noter que plus rapide et plus performant dans ce cas ci sera très anecdotique, au vu de la taille du script et du nombre de commandes maximal, mais cela te permettra de voir la différence entre différentes qualités de scripts
 
 
-1* Forme du script.
+1- Forme du script.
 Les bonne pratiques invitent à ce que les différents "blocs" de ton script soit visible au premier coup d’œil.
 Un "bloc", est par exemple, un semble de commandes regroupées sous une condition if. Comme par exemple.
 
-if [ $note *lt 20 ] && [ $note *ge 16 ]
+if [ $note -lt 20 ] && [ $note -ge 16 ]
 then
 echo "Très bien"
 
-La commande `echo "Très bien"` appartient au bloc de la condition `if [ $note *lt 20 ] && [ $note *ge 16 ] then.
+La commande `echo "Très bien"` appartient au bloc de la condition `if [ $note -lt 20 ] && [ $note -ge 16 ] then.
 
 De ce fait il faut que cela apparaisse "physiquement" dans ton script.
 
@@ -62,19 +62,19 @@ De manière conventionnelle on rajoute 4 espaces (ou une tabulation ), devant le
 Cela donne pour l'ensemble du script :
 
 ```
-if [ $note *lt 20 ] && [ $note *ge 16 ]
+if [ $note -lt 20 ] && [ $note -ge 16 ]
 then
         echo "Très bien"
-elif [ $note *lt 16 ] && [ $note *ge 14 ]
+elif [ $note -lt 16 ] && [ $note -ge 14 ]
 then
         echo "Bien"
-elif [ $note *lt 14 ] && [ $note *ge 12 ]
+elif [ $note -lt 14 ] && [ $note -ge 12 ]
 then
         echo "Assez bien"
-elif [ $note *lt 12 ] && [ $note *ge 10 ]
+elif [ $note -lt 12 ] && [ $note -ge 10 ]
 then
         echo "Passable"
-elif [ $note *lt 10 ] && [ $note *ge 0 ]
+elif [ $note -lt 10 ] && [ $note -ge 0 ]
 then
         echo "Insuffisant"
 else
@@ -86,30 +86,30 @@ Comme cela on visualise très bien que les commandes `echo ....`, ne sont pas au
 on ne peut accéder à ce "niveau de lecture" que si le niveau précédent le permet, comme ici une condition.
 
 
-2* Optimisation
+2- Optimisation
         Tu peux voir que dans ton script le message "Valeur incorrecte" apparaît à la fin de ton script. Autrement dit si l'utilisateur
-entre au clavier : une valeur inférieure à 0 ou supérieure à 20 , le test de "est*ce une valeur correcte", arrive après
+entre au clavier : une valeur inférieure à 0 ou supérieure à 20 , le test de "est-ce une valeur correcte", arrive après
 tous les tests pour savoir si la valeur est comprise entre deux chiffres. Donc 5 tests seront réalisés pour rien, alors qu'il suffirait
 de faire un premier test en amont de ton script pour déduire si c'est une valeur incorrecte.
 
-Premier test, est*ce que la note est comprise entre 0 et 20?
+Premier test, est-ce que la note est comprise entre 0 et 20?
 
 ```
-if [ $note *le 20 ] && [ $note *ge 0 ]
+if [ $note -le 20 ] && [ $note -ge 0 ]
 then
-        if [ $note *le 20 ] && [ $note *ge 16 ]
+        if [ $note -le 20 ] && [ $note -ge 16 ]
         then
                 echo "Très bien"
-        elif [ $note *lt 16 ] && [ $note *ge 14 ]
+        elif [ $note -lt 16 ] && [ $note -ge 14 ]
         then
                 echo "Bien"
-        elif [ $note *lt 14 ] && [ $note *ge 12 ]
+        elif [ $note -lt 14 ] && [ $note -ge 12 ]
         then
                 echo "Assez bien"
-        elif [ $note *lt 12 ] && [ $note *ge 10 ]
+        elif [ $note -lt 12 ] && [ $note -ge 10 ]
         then
                 echo "Passable"
-        elif [ $note *lt 10 ] && [ $note *ge 0 ]
+        elif [ $note -lt 10 ] && [ $note -ge 0 ]
         then
                 echo "Insuffisant"
         else
@@ -136,7 +136,7 @@ de bien lire l'énoncé, de noter les différents point à intégrer dans le scr
 
 Correction script:
         Premier point : L'exercice demandait "Reprenez l'exercice 1", et nous ne voyons pas le script de l'exercice 1 dans ce script.
-Cela étant ce n'est pas très grave dans ce cas*ci, car c'est très facile à implémenter et je pense que c'est plus un oublie qu'autre chose
+Cela étant ce n'est pas très grave dans ce cas-ci, car c'est très facile à implémenter et je pense que c'est plus un oublie qu'autre chose
 
         Deuxième point : "Faites en sorte que le programme se répète tant que l'utilisateur n'aie pas saisie une note négative ou q".
 Le cas de "q" est bien implémenté et marche bien . Il manque cependant le cas ou l'utilisateur rentre une valeur négative, c'est peut être
@@ -161,7 +161,7 @@ Avis général : L'exercice à été compris et le traitement des paramètres du
 Correction script:
         Même problème pour le traitement du cas ou la note est égal à 20, voir correction exercice 1
 
-        La variable "$#", qui selon cette source (https://www.commentcamarche.com/faq/5444*bash*les*parametres),
+        La variable "$#", qui selon cette source (https://www.commentcamarche.com/faq/5444-bash-les-parametres),
 "$# Le nombre de paramètres passés au script "
 Plusieurs sources converges vers définition.
 
@@ -186,7 +186,7 @@ Ce que nous voulons souligner ici, et cela peut être assez complexe à visualis
 qui type leurs variables. Ici c'est un test numérique qui devrait être fait. Comme
 
 ```
-if [ $# *eq 1 ]
+if [ $# -eq 1 ]
 then
     Appreciation $1
 else
@@ -211,7 +211,7 @@ en mathématique.
 Exemple
 
 ```
-if [ $1 *lt 20 ] && [ $1 *ge 16 ]
+if [ $1 -lt 20 ] && [ $1 -ge 16 ]
 then
 echo "Très bien"
 ```
