@@ -130,15 +130,15 @@ Comme tu peux voir, ici l'amélioration concerne principalement deux choses :
 
 
 
-Avis général : l'exercice est incomplet et ne remplit pas les conditions données par l'énoncé de l'exercice, ils faut faire attention
+Avis général : l'exercice est incomplet et ne remplit pas les conditions données par l'énoncé de l'exercice, il faut faire attention
 de bien lire l'énoncé, de noter les différents point à intégrer dans le script.
 
 
 Correction script:
-        Premier point : L'exercice demandait "Reprenez l'exercice 1", et nous ne voyons pas le script de l'exercice 1 dans ce script.
+ * Premier point : L'exercice demandait "Reprenez l'exercice 1", et nous ne voyons pas le script de l'exercice 1 dans ce script.
 Cela étant ce n'est pas très grave dans ce cas-ci, car c'est très facile à implémenter et je pense que c'est plus un oublie qu'autre chose
 
-        Deuxième point : "Faites en sorte que le programme se répète tant que l'utilisateur n'aie pas saisie une note négative ou q".
+ * Deuxième point : "Faites en sorte que le programme se répète tant que l'utilisateur n'aie pas saisie une note négative ou q".
 Le cas de "q" est bien implémenté et marche bien . Il manque cependant le cas ou l'utilisateur rentre une valeur négative, c'est peut être
 aussi un oubli. Au vu de ce que tu as fait, ça ne devrait pas être difficile à implémenter mais il faut faire très attention, car pour le moment
 un oubli comme le premier point et le deuxième point est facile à rattraper, mais plus tes scripts augmenteront en complexité et plus l'intégration
